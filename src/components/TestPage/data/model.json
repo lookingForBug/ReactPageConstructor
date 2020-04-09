@@ -1,0 +1,42 @@
+{
+  "structure": [
+    {
+      "id": "test1"
+    },
+    {
+      "id": "test2"
+    },
+    {
+      "id": "test3"
+    },
+    {
+      "id": "test4"
+    }
+  ],
+  "blocks": {
+    "test1": {
+      "component": "TestBlock",
+      "props": {
+        "text": "Hello im test one block"
+      }
+    },
+    "test2": {
+      "component": "TestBlock",
+      "props": {
+        "text": "Hello im test two block"
+      }
+    },
+    "test3": {
+      "component": "TestBlock",
+      "props": {
+        "text": "Hello im test three block"
+      }
+    },
+    "test4": {
+      "component": "TestBlock",
+      "props": {
+        "text": "Hello im test four block"
+      }
+    }
+  }
+}
