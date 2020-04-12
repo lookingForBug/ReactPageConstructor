@@ -1,0 +1,64 @@
+@import "../../../../styles/variables";
+@import "../../../../utils/mixins";
+
+.wrapper {
+  display: flex;
+  color: $default;
+  flex-direction: column-reverse;
+
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &.reversed {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:first-child) {
+      margin-top: 150px;
+    }
+  }
+}
+
+.textContent,
+.imageContent {
+  width: 100%;
+
+  @include desktop {
+    width: calc(50% - 15px);
+  }
+}
+
+.title {
+  color: $accent;
+  font-size: 24px;
+  line-height: 1.41;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.88;
+  font-weight: 300;
+}
+
+.promotextWrapper {
+  padding: 30px 55px 30px 45px;
+  background: $accent-bg;
+  border-left: 10px solid $accent;
+}
+
+.promotext {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.27;
+}
+
+.image {
+  max-width: 100%;
+}

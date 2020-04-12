@@ -1,0 +1,31 @@
+{
+  "structure": [
+    {
+      "id": "infoSection"
+    }
+  ],
+  "blocks": {
+    "infoSection": {
+      "component": "InfoSection",
+      "props": {
+        "infoBlocks": [
+          {
+            "title": "About us",
+            "description": "The occupational traffic permit is one of the most important things in the company when carrying out freight transport. In fact, it is a prerequisite for doing business traffic at all.",
+            "imageUrl": "/images/trafico/info-block-1.png",
+            "promoQuestions": [
+              {
+                "text": "How do you do when you need to obtain a commercial traffic permit for freight transport to your business?"
+              }
+            ]
+          },
+          {
+            "title": "How to apply",
+            "description": "When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO.",
+            "imageUrl": "/images/trafico/info-block-2.png"
+          }
+        ]
+      }
+    }
+  }
+}

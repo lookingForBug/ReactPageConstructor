@@ -1,1 +1,0 @@
-export { TestBlock } from './components/TestBlock/TestBlock';
