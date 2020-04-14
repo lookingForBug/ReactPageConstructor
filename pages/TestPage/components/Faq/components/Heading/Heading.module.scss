@@ -1,0 +1,25 @@
+@import '../../../../styles/variables';
+
+.wrapper {
+  position: relative;
+}
+
+.text {
+  padding: 150px 0;
+  max-width: 500px;
+}
+
+.title {
+  color: $accent;
+}
+
+.subtitle {
+  font-size: 48px;
+  line-height: 140%;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: -150px;
+}

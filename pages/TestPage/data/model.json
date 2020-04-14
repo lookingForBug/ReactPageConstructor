@@ -2,6 +2,9 @@
   "structure": [
     {
       "id": "infoSection"
+    },
+    {
+      "id": "faq"
     }
   ],
   "blocks": {
@@ -23,6 +26,56 @@
             "title": "How to apply",
             "description": "When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO.",
             "imageUrl": "/images/trafico/info-block-2.png"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "component": "Faq",
+      "props": {
+        "title": "FAQ",
+        "subtitle": "Questions and Answers on Professional Traffic Permits:",
+        "iconUrl": "/images/trafico/faq-svg.svg",
+        "items": [
+          {
+            "question": "What is a professional traffic permit?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          },
+          {
+            "question": "How to check the traffic condition?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+          },
+          {
+            "question": "What are the requirements for a professional traffic permit?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+          },
+          {
+            "question": "Are there professional traffic permit training courses at a distance?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes."
+          },
+          {
+            "question": "When is a professional traffic permit needed?",
+            "answer": "Lorem ipsum dolor sit amet"
+          },
+          {
+            "question": "Where to look for a traffic permit?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes."
+          },
+          {
+            "question": "Are there differences between a traffic permit and a professional traffic permit?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+          },
+          {
+            "question": "How much does a commercial traffic permit cost for goods?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient."
+          },
+          {
+            "question": "How to plug in for the traffic permit test?",
+            "answer": "Lorem ipsum dolor sit amet."
+          },
+          {
+            "question": "How is the sample for a professional traffic permit booked?",
+            "answer": "Lorem ipsum dolor sit amet, consectetuer."
           }
         ]
       }

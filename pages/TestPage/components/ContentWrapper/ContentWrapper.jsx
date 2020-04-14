@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 export function ContentWrapper({ children, backgroundProps }) {
   return (
-    <div style={backgroundProps}>
+    <div style={backgroundProps} className={cx('wrapper')}>
       <div className={cx('content')}>
         {children}
       </div>
@@ -17,6 +17,12 @@ export function ContentWrapper({ children, backgroundProps }) {
 
 ContentWrapper.propTypes = {
   backgroundProps: PropTypes.shape({
-    color: PropTypes.string,
+    background: PropTypes.string,
   })
+}
+
+ContentWrapper.defaultProps = {
+  backgroundProps: {
+    background: '#FEF8F5',
+  }
 }

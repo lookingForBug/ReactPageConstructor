@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import InfoBlock from './components/InfoBlock/InfoBlock';
 import { ContentWrapper } from '../ContentWrapper/ContentWrapper';
+import { WithMargin } from '../WithMargin/WithMargin';
 
 export function InfoSection({ infoBlocks }) {
   const hasInfoBlocks = infoBlocks && !!infoBlocks.length;
@@ -12,11 +13,12 @@ export function InfoSection({ infoBlocks }) {
     <ContentWrapper>
       {infoBlocks.map(
         (infoBlockProps, index) => (
-          <InfoBlock
-            key={index}
-            isReversed={Boolean(index % 2)}
-            {...infoBlockProps}
-          />
+          <WithMargin key={index} marginTop={index !== 0 ? { mobile: 50, desktop: 150 } : {}}>
+            <InfoBlock
+              isReversed={Boolean(index % 2)}
+              {...infoBlockProps}
+            />
+          </WithMargin>
         )
       )}
     </ContentWrapper>

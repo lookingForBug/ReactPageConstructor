@@ -6,10 +6,6 @@
   color: $default;
   flex-direction: column-reverse;
 
-  &:not(:first-child) {
-    margin-top: 50px;
-  }
-
   @include desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -17,10 +13,6 @@
 
     &.reversed {
       flex-direction: row-reverse;
-    }
-
-    &:not(:first-child) {
-      margin-top: 150px;
     }
   }
 }
@@ -34,23 +26,38 @@
   }
 }
 
+.imageContent {
+  text-align: center;
+}
+
 .title {
-  color: $accent;
   font-size: 24px;
-  line-height: 1.41;
   font-weight: 700;
+  line-height: 1.41;
+  color: $accent;
 }
 
 .description {
+  margin-top: 25px;
   font-size: 18px;
-  line-height: 1.88;
   font-weight: 300;
+  line-height: 2.22;
+
+  @include desktop {
+    margin-top: 45px;
+    max-width: 470px;
+  }
 }
 
 .promotextWrapper {
   padding: 30px 55px 30px 45px;
-  background: $accent-bg;
+  margin-top: 25px;
   border-left: 10px solid $accent;
+  background: $accent-bg;
+
+  @include desktop {
+    margin-top: 70px;
+  }
 }
 
 .promotext {
