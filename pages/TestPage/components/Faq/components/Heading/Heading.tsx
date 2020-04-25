@@ -1,11 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Heading.module.scss';
 
 const cx = classNames.bind(styles);
 
-export function Heading({ title, subtitle, iconUrl }) {
+export type HeadingPropsType = {
+  title: string,
+  subtitle?: string,
+  iconUrl?: string,
+}
+
+export function Heading({ title, subtitle, iconUrl }: HeadingPropsType) {
   return (
     <div className={cx('wrapper')}>
       <div className={cx('text')}>
@@ -16,9 +21,3 @@ export function Heading({ title, subtitle, iconUrl }) {
     </div>
   );
 };
-
-Heading.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  iconUrl: PropTypes.string,
-}

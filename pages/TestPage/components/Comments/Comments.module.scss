@@ -1,0 +1,9 @@
+.commentsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.commentWrapper {
+    flex-basis: calc(33% - 20px);
+}

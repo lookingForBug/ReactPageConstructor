@@ -1,23 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 // common components
-import { ContentWrapper } from '../ContentWrapper/ContentWrapper';
-import { WithMargin } from '../WithMargin/WithMargin';
+import { ContentWrapper } from 'commonComponents/ContentWrapper/ContentWrapper';
+import { WithMargin } from 'commonComponents/WithMargin/WithMargin';
 // components
-import { Heading } from './components/Heading/Heading';
-import { FaqBlock } from './components/FaqBlock/FaqBlock';
+import { Heading, HeadingPropsType } from './components/Heading/Heading';
+import { FaqBlock, FaqBlockPropsType } from './components/FaqBlock/FaqBlock';
 
 import styles from './Faq.module.scss';
 
 const cx = classNames.bind(styles);
 
-function chunkArray(myArray, chunk) {
+type FaqPropsType = {
+  items: FaqBlockPropsType[],
+} & HeadingPropsType;
+
+function chunkArray(
+  myArray: FaqBlockPropsType[],
+  chunk: number): FaqBlockPropsType[][] {
   return [[...myArray.slice(0, chunk)], [...myArray.slice(chunk, chunk + myArray.length)]]
 }
 
-export function Faq({ items, ...headingProps }) {
-  if (!items && items.length === 0) {
+export function Faq({ items, ...headingProps }: FaqPropsType) {
+  if (items.length === 0) {
     return
   };
 
@@ -49,17 +54,3 @@ export function Faq({ items, ...headingProps }) {
     </ContentWrapper>
   );
 };
-
-Faq.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  iconUrl: PropTypes.string,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      question: PropTypes.string,
-      answer: PropTypes.string,
-    }),
-  ),
-};
-
-

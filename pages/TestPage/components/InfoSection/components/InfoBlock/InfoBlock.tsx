@@ -1,11 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './InfoBlock.module.scss';
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
-function InfoBlock({ title, description, promoQuestions, imageUrl, isReversed }) {
+type promoQuestionType = {
+  text: string,
+};
+
+export type InfoBlockPropsType = {
+  title: string,
+  description: string,
+  promoQuestions: promoQuestionType[],
+  imageUrl: string,
+  isReversed: boolean,
+};
+
+export function InfoBlock({
+  title,
+  description,
+  promoQuestions,
+  imageUrl,
+  isReversed
+}: InfoBlockPropsType) {
   const hasPromoQuestions = promoQuestions && !!promoQuestions.length;
 
   return (
@@ -31,18 +48,3 @@ function InfoBlock({ title, description, promoQuestions, imageUrl, isReversed })
     </div>
   )
 };
-
-InfoBlock.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  promoQuestions: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string,
-    }),
-  ),
-  imageUrl: PropTypes.string,
-  isReversed: PropTypes.bool,
-};
-
-export default InfoBlock;
-

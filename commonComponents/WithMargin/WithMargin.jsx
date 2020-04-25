@@ -27,11 +27,11 @@ export function WithMargin({ children, marginTop = {}, marginBottom = {} }) {
 
 WithMargin.propTypes = {
   marginTop: PropTypes.shape({
-    mobile: PropTypes.string,
-    desktop: PropTypes.string,
+    mobile: PropTypes.number,
+    desktop: PropTypes.number,
   }),
   marginBottom: PropTypes.shape({
-    mobile: PropTypes.string,
-    desktop: PropTypes.string,
+    mobile: PropTypes.number,
+    desktop: PropTypes.number,
   })
 };
