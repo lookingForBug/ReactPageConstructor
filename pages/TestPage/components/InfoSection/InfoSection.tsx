@@ -1,7 +1,6 @@
 import React from 'react'
 import { InfoBlock, InfoBlockPropsType } from './components/InfoBlock/InfoBlock';
-import { ContentWrapper } from 'commonComponents/ContentWrapper/ContentWrapper';
-import { WithMargin } from 'commonComponents/WithMargin/WithMargin';
+import { ContentWrapper, WithMargin } from 'commonComponents/Layout';
 
 type InfoSectionType = {
   infoBlocks: InfoBlockPropsType[],
@@ -16,7 +15,7 @@ export function InfoSection({ infoBlocks }: InfoSectionType) {
     <ContentWrapper>
       {infoBlocks.map(
         (infoBlockProps, index) => (
-          <WithMargin key={index} marginTop={index !== 0 ? { mobile: 50, desktop: 150 } : {}}>
+          <WithMargin key={index} marginTop={index !== 0 ? { mobile: 50, desktop: 150 } : undefined}>
             <InfoBlock
               isReversed={Boolean(index % 2)}
               {...infoBlockProps}

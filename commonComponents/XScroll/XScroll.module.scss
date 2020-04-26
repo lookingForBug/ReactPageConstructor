@@ -1,0 +1,15 @@
+.scroller {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  position: relative;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  display: inline-block;
+  min-width: 100%;
+}

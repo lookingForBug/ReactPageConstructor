@@ -86,6 +86,8 @@
     "comments": {
       "component": "Comments",
       "props": {
+        "title": "About us",
+        "subtitle": "Out Awesome Clients",
         "comments": [
           {
             "text": "Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.",

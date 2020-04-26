@@ -1,9 +1,68 @@
+@import "../../styles/variables";
+
+.wrapper {
+    display: flex;
+    max-width: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
 .commentsWrapper {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    margin-top: 60px;
+    width: 1000px;
 }
 
 .commentWrapper {
-    flex-basis: calc(33% - 20px);
+    flex-basis: 320px;
+
+    &:last-child {
+        opacity: 50%;
+    }
+}
+
+.heading {
+    max-width: 310px;
+}
+
+.title {
+    color: $accent;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.subtitle {
+    font-size: 48px;
+    line-height: 67px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+
+    &.prev {
+        transform: rotate(180deg);
+    }
+
+    &.next {
+        margin-left: 20px;
+    }
+
+    &:disabled {
+        opacity: 50%;
+        cursor: default;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
 }

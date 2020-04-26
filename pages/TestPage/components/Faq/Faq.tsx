@@ -1,8 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 // common components
-import { ContentWrapper } from 'commonComponents/ContentWrapper/ContentWrapper';
-import { WithMargin } from 'commonComponents/WithMargin/WithMargin';
+import { ContentWrapper, WithMargin, WithPadding } from 'commonComponents/Layout';
 // components
 import { Heading, HeadingPropsType } from './components/Heading/Heading';
 import { FaqBlock, FaqBlockPropsType } from './components/FaqBlock/FaqBlock';
@@ -30,27 +29,32 @@ export function Faq({ items, ...headingProps }: FaqPropsType) {
 
   return (
     <ContentWrapper>
-      <Heading {...headingProps} />
-      <div className={cx('wrapper')}>
-        {chunkOne && !!chunkOne.length &&
-          <div className={cx('column')}>
-            {chunkOne.map((faqBlockProps, i) => (
-              <WithMargin marginTop={i !== 0 ? { mobile: 10, desktop: 10 } : {}} key={i}>
-                <FaqBlock {...faqBlockProps} />
-              </WithMargin>
-            ))}
-          </div>
-        }
-        {chunkTwo && !!chunkTwo.length &&
-          <div className={cx('column')}>
-            {chunkTwo.map((faqBlockProps, i) => (
-              <WithMargin marginTop={i !== 0 ? { mobile: 10, desktop: 10 } : {}} key={i}>
-                <FaqBlock {...faqBlockProps} />
-              </WithMargin>
-            ))}
-          </div>
-        }
-      </div>
+      <WithPadding
+        paddingTop={{ mobile: 110, desktop: 110 }}
+        paddingBottom={{ mobile: 110, desktop: 110 }}
+      >
+        <Heading {...headingProps} />
+        <div className={cx('wrapper')}>
+          {chunkOne && !!chunkOne.length &&
+            <div className={cx('column')}>
+              {chunkOne.map((faqBlockProps, i) => (
+                <WithMargin marginTop={i !== 0 ? { mobile: 10, desktop: 10 } : undefined} key={i}>
+                  <FaqBlock {...faqBlockProps} />
+                </WithMargin>
+              ))}
+            </div>
+          }
+          {chunkTwo && !!chunkTwo.length &&
+            <div className={cx('column')}>
+              {chunkTwo.map((faqBlockProps, i) => (
+                <WithMargin marginTop={i !== 0 ? { mobile: 10, desktop: 10 } : undefined} key={i}>
+                  <FaqBlock {...faqBlockProps} />
+                </WithMargin>
+              ))}
+            </div>
+          }
+        </div>
+      </WithPadding>
     </ContentWrapper>
   );
 };
